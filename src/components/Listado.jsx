@@ -1,16 +1,11 @@
 import React from "react";
+import Cita from "./Cita";
 const Listado = (props) => {
+    console.log(props.citas)
+    return(
     <div className="container">
-        <div className="cita" key={props.Mascota}>
-            <p>Mascota: <span>{props.Mascota}</span></p>
-            <p>Dueño: <span>{props.Dueño}</span></p>
-            <p>Fecha: <span>{props.Fecha}</span></p>
-            <p>Hora: <span>{props.Hora}</span></p>
-            <p>Sintomas: <span>{props.Sintomas}</span></p>
-            <button className="button elimnar u-full-width">Eliminar ×</button>
-
-        </div>
-        <br></br>
+        {props.citas.map((cita, i) => <Cita key={i} {...cita}/>)}
     </div>
+    )
 };
 export default Listado;
