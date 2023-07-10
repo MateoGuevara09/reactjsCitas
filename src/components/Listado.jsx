@@ -1,5 +1,6 @@
 import React from "react";
 import Cita from "./Cita";
+import { PropTypes } from "prop-types";
 const Listado = (props) => {
     return(
     <div className="container">
@@ -7,4 +8,8 @@ const Listado = (props) => {
     </div>
     )
 };
+Listado.propTypes = {
+    citas: PropTypes.array.isRequired,
+    setCitas: PropTypes.func.isRequired
+}
 export default Listado;

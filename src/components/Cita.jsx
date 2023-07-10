@@ -1,4 +1,6 @@
 
+import { PropTypes } from "prop-types";
+
 const Cita =  (props) => {
     const eliminar = () => {
         const nuevoArray = [...props.cita]
@@ -18,4 +20,14 @@ const Cita =  (props) => {
     )
 }
 
+Cita.propTypes = {
+    cita: PropTypes.array.isRequired,
+    setcitas: PropTypes.func.isRequired,
+    punto: PropTypes.number.isRequired,
+    Mascota: PropTypes.string.isRequired,
+    Dueño: PropTypes.string.isRequired,
+    Fecha: PropTypes.string.isRequired,
+    Hora: PropTypes.string.isRequired,
+    Sintomas: PropTypes.string.isRequired
+}
 export default Cita;

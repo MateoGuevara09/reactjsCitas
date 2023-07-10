@@ -1,5 +1,5 @@
 import React from "react";
-
+import { PropTypes } from "prop-types";
 const Formulario = (props) => {
 
 
@@ -27,6 +27,12 @@ const Formulario = (props) => {
 
   );  
 }
+Formulario.propTypes = {
+  citas: PropTypes.array.isRequired,
+  setCitas: PropTypes.func.isRequired
+}
+
+
 export default Formulario;
 
 
